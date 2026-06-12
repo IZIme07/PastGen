@@ -1,3 +1,10 @@
+import { StoreProvider } from "./state/store";
+import { AppShell } from "./views/AppShell";
+
 export default function App() {
-  return null; // AppShell подключается в задаче 10
+  return (
+    <StoreProvider>
+      <AppShell />
+    </StoreProvider>
+  );
 }

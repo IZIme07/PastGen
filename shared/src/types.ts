@@ -202,6 +202,7 @@ export interface TreeDTO {
     profile_confidence: number;
     birth_year: number | null;
     death_year: number | null;
+    birth_year_alt: number | null;
     birth_year_disputed: boolean;
     has_conflict: boolean;
   })[];

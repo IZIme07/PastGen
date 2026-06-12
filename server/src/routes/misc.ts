@@ -124,11 +124,15 @@ export function treeRouter(db: DB): Router {
       const personClaims = claims.listForSubject(db, "person", p.id);
       const birth = personClaims.find((c) => c.claim_type === "birth_date" && c.status === "primary");
       const death = personClaims.find((c) => c.claim_type === "death_date" && c.status === "primary");
+      const birthAlt = birth
+        ? personClaims.find((c) => c.claim_type === "birth_date" && c.status === "alternative" && c.parent_claim_id === birth.id)
+        : undefined;
       return {
         ...p,
         profile_confidence: profileConfidence(personClaims),
         birth_year: birth ? yearOf(birth.value) : null,
         death_year: death ? yearOf(death.value) : null,
+        birth_year_alt: birthAlt ? yearOf(birthAlt.value) : null,
         birth_year_disputed: !!birth?.conflict,
         has_conflict: personClaims.some((c) => c.conflict),
       };
