@@ -1,0 +1,43 @@
+/* PastGen — Typography tokens
+   Spectral (serif) = display / names / story prose.
+   IBM Plex Sans = working UI.  IBM Plex Mono = archival metadata. */
+
+:root {
+  /* ---- Families ---- */
+  --font-serif: 'Spectral', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-sans:  'IBM Plex Sans', 'PT Root UI', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:  'IBM Plex Mono', 'SF Mono', 'Roboto Mono', ui-monospace, monospace;
+  /* alias for base helpers */
+  --font-display: var(--font-serif);
+
+  /* ---- Weights (numbers — usable in `font:` shorthand) ---- */
+  --w-regular: 400;  /* @kind font */
+  --w-medium: 500;   /* @kind font */
+  --w-semibold: 600; /* @kind font */
+  --w-bold: 700;     /* @kind font */
+
+  /* ---- Tracking ---- */
+  --track-tight: -0.02em;   /* @kind font */
+  --track-snug: -0.01em;    /* @kind font */
+  --track-overline: 0.12em; /* @kind font */
+
+  /* ---- Role shorthands: <weight> <size>/<leading> <family> ---- */
+  --text-display:  var(--w-semibold) 52px/1.08 var(--font-serif);
+  --text-h1:       var(--w-semibold) 38px/1.14 var(--font-serif);
+  --text-h2:       var(--w-semibold) 29px/1.20 var(--font-serif);
+  --text-h3:       var(--w-semibold) 22px/1.28 var(--font-serif);
+  --text-prose:    var(--w-regular) 16px/1.65 var(--font-serif);
+  --text-ui-body:  var(--w-regular) 15px/1.5 var(--font-sans);
+  --text-ui-small: var(--w-regular) 13px/1.45 var(--font-sans);
+
+  /* ---- Raw scale (when a single size is needed) ---- */
+  --fs-display: 52px;
+  --fs-h1: 38px;
+  --fs-h2: 29px;
+  --fs-h3: 22px;
+  --fs-lg: 17px;
+  --fs-base: 15px;
+  --fs-sm: 13px;
+  --fs-xs: 12px;
+  --fs-2xs: 11px;
+}

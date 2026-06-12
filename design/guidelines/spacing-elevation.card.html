@@ -1,0 +1,41 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Radii & elevation" subtitle="Gentle corners, soft warm-tinted shadows" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 22px 24px; background: var(--bg-app); }
+  h4 { font: var(--w-semibold) 11px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 12px; }
+  .group { display: flex; gap: 40px; flex-wrap: wrap; }
+  .row { display: flex; gap: 14px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { width: 54px; height: 44px; background: var(--card); border: 1px solid var(--line-strong); }
+  .nm { font: var(--w-medium) 11px/1 var(--font-sans); color: var(--text-body); }
+  .px { font: 10px/1 var(--font-mono); color: var(--text-faint); }
+  .sbox { width: 64px; height: 48px; background: var(--card); border-radius: var(--radius-md); }
+</style>
+</head>
+<body>
+<div class="group">
+  <div>
+    <h4>Radii</h4>
+    <div class="row">
+      <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><div class="nm">xs</div><div class="px">4</div></div>
+      <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="nm">sm</div><div class="px">6</div></div>
+      <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="nm">md</div><div class="px">10</div></div>
+      <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="nm">lg</div><div class="px">14</div></div>
+    </div>
+  </div>
+  <div>
+    <h4>Elevation</h4>
+    <div class="row">
+      <div class="item"><div class="sbox" style="box-shadow:var(--shadow-xs)"></div><div class="nm">xs</div></div>
+      <div class="item"><div class="sbox" style="box-shadow:var(--shadow-sm)"></div><div class="nm">sm</div></div>
+      <div class="item"><div class="sbox" style="box-shadow:var(--shadow-md)"></div><div class="nm">md</div></div>
+      <div class="item"><div class="sbox" style="box-shadow:var(--shadow-lg)"></div><div class="nm">lg</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

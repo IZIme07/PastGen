@@ -1,0 +1,38 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo & mark" subtitle="Wordmark, the family-tree node mark, light + dark lockups" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 0; background: var(--bg-app); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .cell { padding: 26px 28px; display: flex; align-items: center; gap: 18px; }
+  .light { background: var(--paper-0); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .dark  { background: var(--evergreen-800); border-bottom: 1px solid rgba(0,0,0,.2); }
+  .lbl { position: absolute; font: var(--w-semibold) 10px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; }
+  .cell { position: relative; }
+  .light .lbl { color: var(--text-faint); }
+  .dark .lbl  { color: rgba(246,241,231,.55); }
+  .mark-row { display:flex; gap: 22px; align-items:center; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="cell light"><span class="lbl">Primary lockup</span><img src="../assets/logo-pastgen.svg" alt="PastGen" height="34" /></div>
+  <div class="cell dark"><span class="lbl">On evergreen</span><img src="../assets/logo-pastgen-dark.svg" alt="PastGen" height="34" /></div>
+  <div class="cell light" style="border-bottom:none"><span class="lbl">Mark</span>
+    <div class="mark-row">
+      <img src="../assets/mark-pastgen.svg" alt="mark" height="40" />
+      <img src="../assets/mark-pastgen.svg" alt="mark" height="28" />
+      <img src="../assets/mark-pastgen.svg" alt="mark" height="20" />
+    </div>
+  </div>
+  <div class="cell dark" style="border-bottom:none; background:var(--paper-2)"><span class="lbl" style="color:var(--text-faint)">Clearspace</span>
+    <div style="padding:14px; border:1px dashed var(--line-ink); border-radius:var(--radius-sm); background:var(--paper-0)">
+      <img src="../assets/mark-pastgen.svg" alt="mark" height="34" />
+    </div>
+  </div>
+</div>
+</body>
+</html>
