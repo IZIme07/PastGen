@@ -1,0 +1,92 @@
+/* PastGen — Color tokens
+   "A research instrument with an archival soul."
+   Two anchors: EVERGREEN (the living tree — primary) and BRASS (heritage accent).
+   Warm paper surfaces, warm ink. Confidence + conflict are first-class color. */
+
+:root {
+  /* ---- Warm neutral: paper (surfaces) ---- */
+  --paper-0: #FDFBF6; /* lifted surface, panels, hovers on paper */
+  --paper-1: #FBF8F1; /* app background — parchment */
+  --paper-2: #F1EADA; /* sunken / inset wells, track fills */
+  --paper-3: #ECE4D4; /* deepest paper / tinted divider */
+  --card:    #FFFEFB; /* card / sheet surface — warm white */
+
+  /* ---- Warm neutral: ink (text) ---- */
+  --ink-900: #211C14; /* strongest text, names */
+  --ink-700: #3D362A; /* body / strong UI text */
+  --ink-500: #6B6253; /* secondary text, labels */
+  --ink-300: #9A917F; /* placeholder, disabled, faint meta */
+
+  /* ---- Hairlines ---- */
+  --line:        rgba(33, 28, 18, 0.12); /* default hairline */
+  --line-strong: rgba(33, 28, 18, 0.18); /* emphasized border */
+  --line-ink:    rgba(33, 28, 18, 0.28); /* dashed drop-zones, strong edges */
+
+  /* ---- Evergreen — primary (the living tree) ---- */
+  --evergreen-050: #ECF1EF;
+  --evergreen-100: #D8E3DE;
+  --evergreen-200: #B2C8C0;
+  --evergreen-400: #5C8173;
+  --evergreen-500: #426A5B;
+  --evergreen-600: #2F5043; /* primary / brand default */
+  --evergreen-700: #264438; /* primary hover */
+  --evergreen-800: #1C3429; /* nav rail, press */
+
+  /* ---- Brass — heritage accent, AI invocation, highlights ---- */
+  --brass-050: #F7F1E6;
+  --brass-100: #F0E5D1;
+  --brass-300: #DEC79A;
+  --brass-500: #C49E5F;
+  --brass-600: #B68A4B; /* accent default */
+  --brass-700: #936B33; /* accent text on light */
+
+  /* ---- Confidence language (signature) ---- */
+  --conf-confirmed:    #3F7D54; /* ≥85 — verified by a real source */
+  --conf-confirmed-bg: #E6EFE6;
+  --conf-probable:     #B68A4B; /* ≥60 — likely, soft source (brass) */
+  --conf-probable-bg:  #F4EAD5;
+  --conf-inferred:     #C0792F; /* ≥35 — inferred, indirect (ochre) */
+  --conf-inferred-bg:  #F6E6D0;
+  --conf-hypothesis:   #8A8275; /* <35 — AI guess, unconfirmed (grey) */
+  --conf-hypothesis-bg:#ECE7DD;
+
+  /* ---- Conflict — a contradiction becomes a research task (terracotta) ---- */
+  --conflict-050: #FBEAE5;
+  --conflict-100: #F7DDD6;
+  --conflict-500: #C15A47;
+  --conflict-600: #B14A3C;
+
+  /* ---- Assist — the AI genealogist (calm slate-indigo) ---- */
+  --assist-100: #E6E9F1;
+  --assist-500: #5A6B8C;
+  --assist-600: #46577A;
+
+  /* ================= Semantic aliases ================= */
+  --brand:        var(--evergreen-600);
+  --brand-hover:  var(--evergreen-700);
+  --brand-press:  var(--evergreen-800);
+  --brand-tint:   var(--evergreen-050);
+  --text-on-brand:#F6F1E6;
+  --on-dark:      #F3EEE3;
+
+  --accent:       var(--brass-600);
+  --accent-hover: var(--brass-700);
+
+  --bg-app:       var(--paper-1);
+  --bg-panel:     var(--paper-0);
+  --surface-card: var(--card);
+
+  --text-strong:  var(--ink-900);
+  --text-body:    var(--ink-700);
+  --text-muted:   var(--ink-500);
+  --text-faint:   var(--ink-300);
+
+  --border-default: var(--line);
+  --selection:      var(--brass-100);
+
+  /* generic semantic */
+  --success: var(--conf-confirmed);
+  --warning: var(--conf-inferred);
+  --danger:  var(--conflict-600);
+  --info:    var(--assist-600);
+}

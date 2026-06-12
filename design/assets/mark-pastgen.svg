@@ -1,0 +1,7 @@
+<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PastGen">
+  
+  <path d="M17 9.5 V16 M9 23 V18.5 a2.5 2.5 0 0 1 2.5 -2.5 H22.5 a2.5 2.5 0 0 1 2.5 2.5 V23" stroke="#2F5043" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="17" cy="6.5" r="3.3" fill="#2F5043"></circle>
+  <circle cx="9" cy="26" r="3.3" fill="#2F5043"></circle>
+  <circle cx="25" cy="26" r="3.3" fill="#B68A4B"></circle>
+</svg>

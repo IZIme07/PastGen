@@ -1,0 +1,63 @@
+/* PastGen — Base element defaults & helper classes.
+   (Tokens live in tokens/*. This file applies them to bare elements.) */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: var(--text-ui-body);
+  color: var(--text-body);
+  background-color: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--selection); color: var(--ink-900); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--text-strong);
+  font-weight: var(--w-semibold);
+  line-height: 1.18;
+  letter-spacing: var(--track-snug);
+  margin: 0;
+}
+h1 { font: var(--text-h1); letter-spacing: var(--track-snug); }
+h2 { font: var(--text-h2); }
+h3 { font: var(--text-h3); }
+
+p { margin: 0 0 0.75em; }
+
+a { color: var(--brand); text-underline-offset: 2px;
+    text-decoration-color: color-mix(in oklab, var(--brand) 35%, transparent); }
+a:hover { color: var(--brand-hover); }
+
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.92em; }
+
+:focus-visible { outline: 2px solid transparent; box-shadow: var(--shadow-focus); border-radius: var(--radius-sm); }
+
+hr { border: none; border-top: 1px solid var(--line); margin: var(--space-6) 0; }
+
+/* ---- Helper classes consumers & components use ---- */
+
+/* Uppercase overline / eyebrow */
+.pg-overline {
+  font: var(--w-semibold) 11px/1.3 var(--font-sans);
+  letter-spacing: var(--track-overline);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pg-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.pg-serif { font-family: var(--font-serif); }
+
+/* Subtle dotted paper texture for large canvases (tree / timeline / import).
+   Never loud — a whisper of grain over the warm paper. */
+.pg-paper {
+  background-color: var(--bg-app);
+  background-image: radial-gradient(rgba(33, 28, 18, 0.045) 1px, transparent 1.2px);
+  background-size: 22px 22px;
+  background-position: -1px -1px;
+}

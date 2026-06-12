@@ -1,0 +1,9 @@
+<svg width="186" height="38" viewBox="0 0 186 38" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PastGen">
+  <path d="M21 11 V17 M13.5 24 V20.5 a2.2 2.2 0 0 1 2.2 -2.2 H26.3 a2.2 2.2 0 0 1 2.2 2.2 V24" stroke="#2F5043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="21" cy="8.4" r="3" fill="#2F5043"></circle>
+  <circle cx="13.5" cy="26.6" r="3" fill="#2F5043"></circle>
+  <circle cx="28.5" cy="26.6" r="3" fill="#B68A4B"></circle>
+  <text x="44" y="27" font-family="Spectral, Georgia, serif" font-size="27" font-weight="600" letter-spacing="-0.5">
+    <tspan fill="#23201B">Past</tspan><tspan fill="#2F5043">Gen</tspan>
+  </text>
+</svg>

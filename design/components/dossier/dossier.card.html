@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" viewport="700x440" name="Dossier composites" subtitle="ClaimRow, PersonCard & the AI ProposalCard" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 22px 24px; background: var(--bg-app); }
+  .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; max-width: 660px; }
+  .stack { display: flex; flex-direction: column; gap: 10px; }
+  .lab { font: var(--w-semibold) 11px/1.3 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { ClaimRow, PersonCard, ProposalCard } = window.PastGenDesignSystem_7468cb;
+  function Demo() {
+    return (
+      <div className="wrap">
+        <div>
+          <div className="lab">Claims & people</div>
+          <div className="stack">
+            <PersonCard name="Мария Соколова" lifespan="1928–2009"
+              role="Бабушка · отцовская линия" confidence={76} selected />
+            <ClaimRow label="Дата рождения" value="1928, Тула" confidence={70}
+              sources={[{ type: 'story', label: 'Рассказ' }, { type: 'document', label: 'Справка' }]}
+              alternatives={2} conflict="1928 / 1930" />
+            <ClaimRow label="Брак" value="1949, Москва" confidence={95}
+              sources={[{ type: 'document', label: 'Свид. о браке' }]} />
+          </div>
+        </div>
+        <div>
+          <div className="lab">Update layer</div>
+          <ProposalCard kind="add_fact" title="Дата рождения → 1928"
+            detail="ИИ извлёк дату из свидетельства о рождении при импорте скана."
+            confidence={88}
+            sources={[{ type: 'document', label: 'Свидетельство о рождении' }]}
+            conflict="Конфликтует с подписью на фото (1930)" />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

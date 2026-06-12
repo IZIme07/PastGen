@@ -1,0 +1,35 @@
+/* PastGen — Spacing, sizing & layout tokens. 4px base grid. */
+
+:root {
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* ---- App layout rails (the three-equal-modes workspace) ---- */
+  --rail-nav: 64px;      /* fixed evergreen mode rail */
+  --rail-side: 300px;    /* filters / branches sidebar */
+  --rail-dossier: 400px; /* right-hand person dossier */
+  --topbar-h: 56px;      /* workspace top bar */
+
+  /* ---- Content widths ---- */
+  --content-narrow: 600px; /* Markdown biography column */
+  --content-text: 760px;
+  --content-wide: 1080px;
+  --content-max: 1320px;
+
+  /* ---- Control sizing ---- */
+  --control-h-sm: 30px;
+  --control-h: 38px;
+  --control-h-lg: 46px;
+  --tap-min: 44px;
+}

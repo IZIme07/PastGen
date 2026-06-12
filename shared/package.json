@@ -1,0 +1,7 @@
+{
+  "name": "@pastgen/shared",
+  "version": "1.0.0",
+  "private": true,
+  "types": "src/types.ts",
+  "main": "src/types.ts"
+}

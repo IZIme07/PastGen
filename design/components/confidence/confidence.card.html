@@ -1,0 +1,60 @@
+<!-- @dsCard group="Components" viewport="700x280" name="Confidence & Sources" subtitle="The signature trust + provenance elements" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 22px 24px; background: var(--bg-app); }
+  .rings { display: flex; align-items: flex-start; gap: 26px; margin-bottom: 22px; }
+  .bars { display: flex; flex-direction: column; gap: 12px; max-width: 240px; }
+  .col { display: flex; gap: 36px; flex-wrap: wrap; }
+  .lab { font: var(--w-semibold) 11px/1.3 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; max-width: 320px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { ConfidenceMeter, SourceChip } = window.PastGenDesignSystem_7468cb;
+  function Demo() {
+    return (
+      <div className="col">
+        <div>
+          <div className="lab">Confidence · rings</div>
+          <div className="rings">
+            <ConfidenceMeter value={95} showLabel />
+            <ConfidenceMeter value={70} showLabel />
+            <ConfidenceMeter value={45} showLabel />
+            <ConfidenceMeter value={20} showLabel />
+          </div>
+          <div className="bars">
+            <ConfidenceMeter value={88} variant="bar" showLabel />
+            <ConfidenceMeter value={52} variant="bar" showLabel />
+          </div>
+        </div>
+        <div>
+          <div className="lab">Sources · provenance</div>
+          <div className="chips">
+            <SourceChip type="document" label="Свидетельство о рождении" quality={92} />
+            <SourceChip type="archive" label="Метрическая книга" quality={80} />
+            <SourceChip type="photo" label="Подпись на обороте" quality={55} />
+            <SourceChip type="audio" label="Рассказ бабушки" />
+            <SourceChip type="story" label="Семейная история" />
+            <SourceChip type="letter" label="Письмо 1947" />
+            <SourceChip type="pdf" label="Скан архива.pdf" />
+            <SourceChip type="comment" label="Комментарий дяди" removable />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>
