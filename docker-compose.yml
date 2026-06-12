@@ -1,0 +1,14 @@
+services:
+  pastgen:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    environment:
+      DATA_DIR: /data
+      # Ключ ИИ и Basic Auth берутся из .env (см. .env.example)
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-}
+      BASIC_AUTH: ${BASIC_AUTH:-}
+    restart: unless-stopped
